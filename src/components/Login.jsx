@@ -1,4 +1,7 @@
 import '../styles/login.css'
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
+
 
 const LogIn = () => {
   return (
@@ -28,7 +31,7 @@ const LogIn = () => {
           <hr /><span>Or register</span><hr />
         </div>
         <div className='signup-container'>
-          <p>No tienes cuenta? <a>Crea Una</a> </p>
+          <p>No tienes cuenta? <Nav.Link as={Link} to="/registrate"><a>Crea una</a></Nav.Link> </p>
         </div>
       </div>
     </>
