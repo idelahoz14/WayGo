@@ -8,5 +8,11 @@ body {
   justify-content: center;
   align-items: center;
   gap: 400px;
-  background-color: aqua;
+  background-color: #1099cc;
+}
+
+a, h2 {
+  text-decoration: none;
+  color: whitesmoke;
+  margin: .5rem auto;
 }
