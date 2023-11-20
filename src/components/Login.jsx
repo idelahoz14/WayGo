@@ -1,41 +1,11 @@
-import '../styles/login.css'
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
+import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
+const userIcon = <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
 
-const LogIn = () => {
-  return (
-    <>
-      <div className="wrapper">
-        <div className="title-container">
-          <h2 className='title-1'>Welcome Back!!</h2>
-          <p className='subtitle-1'>Login</p>
-        </div>
-        <div className='form'>
-          <form action="">
-            <div className='input-container'>
-              <label htmlFor="">E-mail</label>
-              <input type="text" name='u-name' required />
-            </div>
-            <div className='input-container'>
-              <label htmlFor="">Password</label>
-              <input type="text" name='u-password' required />
-            </div>
-            <div className='button-container'>
-              <input type="submit" />
-            </div>
-          </form>
-        </div>
-        <a className='forgot-your-password' href="http://">Olvidaste tu contraseña?</a>
-        <div className='span-register'>
-          <hr /><span>Or register</span><hr />
-        </div>
-        <div className='signup-container'>
-          <p>No tienes cuenta? <Nav.Link as={Link} to="/registrate"><a>Crea una</a></Nav.Link> </p>
-        </div>
-      </div>
-    </>
-  )
+const Login = () => {
+  const { loginWithRedirect } = useAuth0();
+  return <a onClick={() => loginWithRedirect()}>{userIcon}</a>;
 }
 
-export default LogIn;
+export default Login;
