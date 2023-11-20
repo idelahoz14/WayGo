@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 
-import Sidebar from "./SideBar";
-
-import 'bootstrap/dist/css/bootstrap.css';
-
 // Styles
+import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/navbar.css'
 
 // Components
 import LogIn from "./Login";
 import Registrate from "./Registrate";
+import Sidebar from "./SideBar";
+
 
 // SVG
 const hamburgerIcon = <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
@@ -19,8 +18,10 @@ const userIcon = <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler
 
 const NavBar = () => {
 
+  // Variables de estado
   const [sidebarVisible, setSidebarVisible] = useState(false);
 
+  // Funcion para activar o desactiva el menu lateral
   const toggleSidebar = () => {
     setSidebarVisible(!sidebarVisible);
   };
@@ -40,7 +41,7 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/"><h2>WayGo</h2></Nav.Link>
           </main>
           <aside>
-            <Nav.Link as={Link} to="/login">{userIcon}</Nav.Link>
+            <Nav.Link as={Link} to="/login"><a>{userIcon}</a></Nav.Link>
           </aside>
         </div>
         <Routes>
