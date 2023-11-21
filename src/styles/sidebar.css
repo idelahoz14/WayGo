@@ -37,3 +37,15 @@ body {
 .content-shifted {
   margin-left: 250px;
 }
+
+li {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 1.9rem;
+  background-color: #1099cc;
+  border-radius: 5px;
+  text-align: center;
+  list-style: none;
+  margin: 0 auto 1rem;
+}

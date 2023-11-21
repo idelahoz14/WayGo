@@ -11,6 +11,7 @@ import '../styles/navbar.css'
 import Login from "./Login";
 import LogoutButton from "./Logout";
 import Sidebar from "./SideBar";
+import BusRoute from "./BusRoute";
 
 
 // SVG
@@ -43,7 +44,7 @@ const NavBar = () => {
             <Sidebar visible={sidebarVisible} />
           </aside>
           <main>
-            <Nav.Link as={Link} to="/"><h2>WayGo</h2></Nav.Link>
+            <Nav.Link as={Link} to="/"><h2 style={{fontFamily: 'Brush Script MT'}}>WayGo</h2></Nav.Link>
           </main>
           <aside>
             {isAuthenticated ? (
@@ -58,6 +59,7 @@ const NavBar = () => {
         </div>
         <Routes>
           <Route path="/" />
+          <Route path="/busroute" element={<BusRoute/>}/>
         </Routes>
       </Router>
     </>
