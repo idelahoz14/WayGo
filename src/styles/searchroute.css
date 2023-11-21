@@ -1,0 +1,37 @@
+.container-search {
+  width: 58%;
+  height: 3rem;
+  background-color: #1099cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  gap: 25px;
+}
+
+.container-search input {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+input[type=button] {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 12px;
+  width: 7rem;
+  height: 1.5rem;
+  font-style: italic;
+}
+
+input[type=button]:hover {
+  transition: .5s;
+  opacity: 0.9;
+}

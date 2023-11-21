@@ -8,10 +8,8 @@ body {
 }
 
 .toggle-btn {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 2;
+  position: relative;
+  z-index: 100;
 }
 
 .sidebar {
@@ -23,6 +21,7 @@ body {
   top: 0;
   left: -250px;
   transition: left 0.3s ease;
+  z-index: 99;
 }
 
 .sidebar-visible {

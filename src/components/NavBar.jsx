@@ -46,7 +46,7 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/"><h2>WayGo</h2></Nav.Link>
           </main>
           <aside>
-            { isAuthenticated ? (
+            {isAuthenticated ? (
               <>
                 <LogoutButton />
               </>
