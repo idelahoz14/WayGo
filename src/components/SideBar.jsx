@@ -24,7 +24,7 @@ const Sidebar = ({ visible }) => {
           <Nav.Link as={Link} to="/"><strong>Rastreo de buses</strong></Nav.Link>
         </li>
         <li>
-          <Nav.Link as={Link} to="/"><strong>Tiempo de viaje</strong></Nav.Link>
+          <Nav.Link as={Link} to="/traveltimecalculator"><strong>Tiempo de viaje</strong></Nav.Link>
         </li>
       </div>
     </>

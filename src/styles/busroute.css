@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  width: 70%;
+  height: 80vh;
+  z-index: 98;
+  position: fixed;
+  border-radius: 10px;
+  top: 5rem;
+  left: 12rem;
+  gap: 10px;
+  padding: 1.5rem 3rem;
+}
+
+.container h2 {
+  color: black;
+}
+
+article {
+  width: 90%;
+  height: 60vh;
+  background-color: #333;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 40%;
+}
+
+.selectedImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.container label {
+  font-style: italic;
+  font-size: 12px;
+  margin: 0 0 -10px 10px;
+}
+
+.container select {
+  outline: none;
+}

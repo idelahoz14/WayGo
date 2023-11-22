@@ -12,6 +12,7 @@ import Login from "./Login";
 import LogoutButton from "./Logout";
 import Sidebar from "./SideBar";
 import BusRoute from "./BusRoute";
+import TravelTimeCalculator from './TravelTimeCalculator'
 
 
 // SVG
@@ -60,6 +61,7 @@ const NavBar = () => {
         <Routes>
           <Route path="/" />
           <Route path="/busroute" element={<BusRoute/>}/>
+          <Route path="traveltimecalculator" element={<TravelTimeCalculator /> } />
         </Routes>
       </Router>
     </>

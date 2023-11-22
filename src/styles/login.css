@@ -109,3 +109,11 @@ hr {
   color: #1099cc;
   cursor: pointer;
 }
+
+.button-logOut {
+  border: none;
+  border-radius: 15px;
+  width: 7rem;
+  font-style: italic;
+  outline: none;
+}
