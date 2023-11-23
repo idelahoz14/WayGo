@@ -9,24 +9,22 @@ const TravelTimeCalculator = () => {
 
   const calculateTravelTime = async () => {
     try {
-      // Aquí puedes implementar la lógica para calcular el tiempo de viaje
-      // Puedes usar una API de geocodificación o algún otro método de cálculo.
+    
+      await new Promise(resolve => setTimeout(resolve, 1000));
 
-      // En este ejemplo, simplemente mostraremos un mensaje de éxito después de 2 segundos.
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-      setTravelTime('2 horas'); // Reemplaza esto con la lógica real de cálculo.
+      setTravelTime(locationA - locationA); // Reemplaza esto con la lógica real de cálculo.
     } catch (error) {
       console.error('Error calculating travel time:', error);
     }
   };
 
   return (
-    <div>
+    <div className='container'>
       <h2>Calculador de Tiempo de Viaje</h2>
       <form>
         <label>
           Punto A:
+          <br />
           <input
             type="text"
             value={locationA}
@@ -36,6 +34,7 @@ const TravelTimeCalculator = () => {
         <br />
         <label>
           Punto B:
+          <br />
           <input
             type="text"
             value={locationB}
@@ -43,7 +42,7 @@ const TravelTimeCalculator = () => {
           />
         </label>
         <br />
-        <button type="button" onClick={calculateTravelTime}>
+        <button type="button" className='' onClick={calculateTravelTime}>
           Calcular Tiempo de Viaje
         </button>
       </form>
